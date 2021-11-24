@@ -20,11 +20,11 @@ def magic (s):
         b_list = ''
         for symb in s:
             if symb.isalpha():
-                b_list.append(symb)
+                b_list+=symb
         rez2 = str(print(f"Лише букви: {b_list}"))
         rez = rez1 + rez2
-    else:
+    elif n_symb > 50:
         rez = 'Вам пора відпочити!'
-    return    
+    return rez   
 magic(cust_s)
 
