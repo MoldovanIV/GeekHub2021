@@ -8,21 +8,20 @@ cust_s = str(input("Введіть випадковий рядок який мі
 def magic (s):
     n_symb = len(s)
     if n_symb > 30 and n_symb < 50:
-        n_symb = len(s)
         n_l = sum(map(str.isalpha, s))
         n_n = sum(map(str.isnumeric, s))
         rez = str(print(f"Cимволів = {n_symb}, букв = {n_l}, цифр = {n_n}"))
     elif n_symb < 30:
-        s = 0
+        suma = 0
         for symb in s:
             if symb.isdigit():
-                s += int(symb)
-            rez1 = srt(print(f"Сума цифр = {s}"))
+                suma += int(symb)
+            rez1 = str(print(f"Сума цифр = {suma}"))
         b_list = ''
         for symb in s:
             if symb.isalpha():
                 b_list.append(symb)
-            rez2 = srt(print(f"Лише букви: {b_list}"))
+            rez2 = str(print(f"Лише букви: {b_list}"))
         rez = rez1 + rez2
     else:
         rez = 'Вам пора відпочити!'
