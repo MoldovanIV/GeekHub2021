@@ -24,7 +24,7 @@ def magic (s):
         rez2 = str(print(f"Лише букви: {b_list}"))
         rez = rez1 + rez2
     elif n_symb > 50:
-        rez = 'Вам пора відпочити!'
+        rez = print("Вам пора відпочити!")
     return rez   
 magic(cust_s)
 
