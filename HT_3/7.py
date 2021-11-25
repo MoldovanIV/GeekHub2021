@@ -15,4 +15,7 @@ def calcul(a,oper,b):
 x = float(input("Введіть перший аргумент х = "))
 znak = input("Введіть позначення дії ( +, -, *, / ) = ")
 y = float(input("Введіть другий аргумент y = "))
-print(f"{x} {znak} {y} = {calcul(x,znak,y)}")
+if (y == 0):
+    print("Ділити на 0 не можна!")
+else:    
+    print(f"{x} {znak} {y} = {calcul(x,znak,y)}")
