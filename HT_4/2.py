@@ -5,10 +5,9 @@
 #Параметр < percents > є необов'язковим і має значення по замовчуванню < 10 > (10%).
 #Функція повинна принтануть і вернуть суму, яка буде на рахунку.
 import math
-def bank(a,years,percent):
+def bank(a,years,percent=10):
     cash = a*pow(1+percent/100,years)
     return cash
-per_const=10
 first_cash = float(input("Введіть величину початкового вкладу:\n"))
 cust_years = float(input("Введіть термін вкладу (роки/натуральне число):\n"))
-print(f"Зробивши вклад {first_cash} під 10% річних через {cust_years} роки/років\nсума на рахунку = {bank(first_cash,cust_years,per_const)}")
+print(f"Зробивши вклад {first_cash} під 10% річних через {cust_years} роки/років\nсума на рахунку = {bank(first_cash,cust_years)}")
