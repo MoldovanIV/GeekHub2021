@@ -34,10 +34,11 @@ def iterate(*args):
         while x > b:
             yield x
             x += step
-    else:
-        yield ""
+    elif a<=b and step <0 or a >= b and step >0:
+        print("Юзер... Ти не думаюча людина! :)")
+
 
 print(type(iterate(1, 10, 2)))
 
-for i in iterate(12):
+for i in iterate(2,20,-2):
     print(i)
