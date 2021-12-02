@@ -3,16 +3,16 @@ def iterate(*args):
     try:
         if len(args) == 1:
             a = 0
-            b = float(args[0])
+            b = int(args[0])
             step = 1
         elif len(args) == 2:
-            a = float(args[0])
-            b = float(args[1])
+            a = int(args[0])
+            b = int(args[1])
             step = 1
         elif len(args) == 3:
-            a = float(args[0])
-            b = float(args[1])
-            step = float(args[2])
+            a = int(args[0])
+            b = int(args[1])
+            step = int(args[2])
             if step == 0:
                 raise ValueError("Крок не може дорівнювати 0")
         else:
@@ -39,5 +39,5 @@ def iterate(*args):
 
 print(type(iterate(1, 10, 2)))
 
-for i in iterate(12,2,-2):
+for i in iterate(12):
     print(i)
