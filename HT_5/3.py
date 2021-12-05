@@ -14,12 +14,21 @@ def validate(login, password):
     has_2capital_letters = re.search(pattern, password)
     if 3 <= len(login) <= 50 and len(password) >= 8 and contains_digit == True and has_2capital_letters is not None:
         return "Вітаємо, Ви авторизовані!"
+    elif contains_digit == False:
+        raise LoginException("Пароль не відповідає вимогам! Ваш пароль має містити цифри!")
+    elif has_2capital_letters is None:
+        raise LoginException("Пароль не відповідає вимогам! Ваш пароль має містити хоча б дві великі літери!")
     else:
         raise LoginException("Проблема авторизації!")
-authorization = {'Kravec':'1234_QWERTY', 'Popov':'qwerty567', 'Tkach':'qwerty', 'Filshyn':'123456', 'Holder':'111_QWErty'}
+    
+authorization = {'Kravec':'1234_QWERTY', 'Holder':'111_QWErty',  'Popov':'qwerty567', 'Tkach':'qwerty', 'Filshyn':'123456'}
 for auth in authorization.keys():
     try:
-       print(f"Логін: {auth}, пароль: {authorization[auth]}")
-       print(validate(auth, authorization[auth]))
-    except LoginException:
-       print("Дані для авторизації не відповідають вимогам")
+        print(f"Логін: {auth}, пароль: {authorization[auth]}")
+        print(validate(auth, authorization[auth]))
+    except LoginException as exp:
+        print(exp)
+
+
+
+    
