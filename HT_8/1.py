@@ -15,7 +15,7 @@ def login_password():
             reader = next(reader)
             for row in reader:
                 if login == row[0] and password == row[1]:
-                    VISITOR = login
+                    visitor = login
                     return True
         attempt -= 1
         return '3 спроби використано'
@@ -23,7 +23,7 @@ def login_password():
 def menu():
     print('Вітаємо!\n')
     print('Переглянути баланс, натисніть 1\n')
-    print('Поповнити баланс, натисніть 2\n')
+    print('Поповнити баланс, ннатисніть 2\n')
     print('Зняти готівку, натисніть 3\n')
     print('Для виходу, натисніть 4\n')
     user_action = int(input())
